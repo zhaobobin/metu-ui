@@ -1,0 +1,45 @@
+.metu-card {
+  margin-bottom: 40px;
+  padding: 14px 0;
+  border-top: 1px solid $border-color;
+
+  .head {
+    margin-bottom: 20px;
+    position: relative;
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+      color: $gray-800;
+    }
+    .extra {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    overflow: hidden;
+    &.show {
+      display: block;
+      // animation: showIndex 0.5s;
+    }
+    &.hide {
+      display: none;
+      // animation: hideIndex 0.5s;
+    }
+
+    @keyframes showIndex{
+      0%{ opacity: 1; transform: rotateX(90deg) }
+      100%{opacity: 0; transform: rotateX(0) }
+    }
+
+    @keyframes hideIndex{
+      0%{ opacity: 0; transform: rotateX(0) }
+      100%{ opacity: 1; transform: rotateX(90deg) }
+    }
+  }
+
+}

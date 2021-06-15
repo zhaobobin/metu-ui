@@ -12,6 +12,7 @@
 /build
 
 # misc
+/config/wechat.ts
 .DS_Store
 .env.local
 .env.development.local
