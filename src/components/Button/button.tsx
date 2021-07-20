@@ -1,8 +1,8 @@
-import React, { FC, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
-import classNames from 'classnames'
+import React, { FC, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import classNames from 'classnames';
 
-export type ButtonSize = 'large' | 'middle' | 'small'
-export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
+export type ButtonSize = 'large' | 'middle' | 'small';
+export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 
 export interface BaseButtonProps {
   /** 自定义类名 */
@@ -22,25 +22,24 @@ export interface BaseButtonProps {
   children: React.ReactNode;
 }
 
-type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>
-type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>
-export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
+type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 /**
  * ## Button 按钮
  * 按钮用于开始一个即时操作。
- * 
+ *
  * ### 何时使用
  * 标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
- * 
+ *
  * ### 引用方法
  * ~~~js
  * import { Button } from 'metu'
  * ~~~
- * 
+ *
  */
 export const Button: FC<ButtonProps> = (props) => {
-
   const {
     className,
     disabled,
@@ -54,32 +53,36 @@ export const Button: FC<ButtonProps> = (props) => {
   } = props;
 
   const classes = classNames('metu-btn', className, {
-    'disabled': (btnType === 'link') && disabled,
+    disabled: btnType === 'link' && disabled,
     'metu-btn-ghost': ghost,
     [`metu-btn-${size}`]: size,
-    [`metu-btn-${btnType}`]: btnType
+    [`metu-btn-${btnType}`]: btnType,
   });
 
-  if (btnType === 'link' && href ) {
+  if (btnType === 'link' && href) {
     return (
       <a className={classes} style={style} href={href} {...restProps}>
         {children}
       </a>
-    )
+    );
   } else {
     return (
-      <button className={classes} style={style} disabled={disabled} {...restProps}>
+      <button
+        className={classes}
+        style={style}
+        disabled={disabled}
+        {...restProps}
+      >
         {children}
       </button>
-    )
+    );
   }
-
-}
+};
 
 Button.defaultProps = {
   disabled: false,
   btnType: 'default',
-  ghost: false
-}
+  ghost: false,
+};
 
 export default Button;

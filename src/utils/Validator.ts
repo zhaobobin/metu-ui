@@ -1,7 +1,7 @@
 /**
  * 表单校验
  */
- const Validator = {
+const Validator = {
   /**
    * Form字段错误检查
    * @param fieldsError

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import Menu from './menu'
+import Menu, { MenuProps } from '../../components/menu/menu'
 
 describe('test Menu and MenuItem component', () => {
   it('', () => {
