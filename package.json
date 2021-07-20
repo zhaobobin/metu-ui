@@ -26,7 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@react-native-community/async-storage": "^1.12.1",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "crypto-es": "^1.2.7",
     "dva-core-ts": "^2.0.7",
