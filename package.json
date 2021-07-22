@@ -1,35 +1,50 @@
 {
   "name": "metu-ui",
   "version": "0.1.0",
-  "private": true,
+  "description": "metu ui",
+  "author": "zhaobobin",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
   "keywords": [
     "Component",
     "UI",
     "React"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "package.json"
   ],
+  "homepage": "http://www.metuwang.com",
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/zhaobobin/metu-ui"
+  },
   "scripts": {
     "start": "react-scripts start",
+    "clean": "rimraf ./dist",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll",
     "test:nowatch": "react-scripts test",
     "lint": "eslint",
     "lint:fix": "yarn run lint --fix",
     "eject": "react-scripts eject",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@react-native-community/async-storage": "^1.12.1",
-    "axios": "^0.19.1",
     "classnames": "^2.2.6",
     "crypto-es": "^1.2.7",
-    "dva-core-ts": "^2.0.7",
     "js-base64": "^3.6.1",
     "react-intl": "^4.4.0",
     "react-transition-group": "^4.3.0"

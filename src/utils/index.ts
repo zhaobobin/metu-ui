@@ -7,6 +7,7 @@ import Request, { FetchGet } from './Request';
 import AppStorage from './AppStorage';
 import WebStorage from './WebStorage';
 import Validator from './Validator';
+import * as ArrayUtil from './ArrayUtil';
 
 export {
   ENV,
@@ -16,5 +17,6 @@ export {
   FetchGet,
   AppStorage,
   WebStorage,
-  Validator
+  Validator,
+  ArrayUtil
 };
