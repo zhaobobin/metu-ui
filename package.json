@@ -1,6 +1,6 @@
 {
   "name": "metu-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "metu ui",
   "author": "zhaobobin",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts",
     "test:nowatch": "cross-env CI=true react-scripts test",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 10",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "yarn run lint --fix",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
