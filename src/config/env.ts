@@ -1,9 +1,7 @@
 /**
  * 全局变量
  */
-'use strict';
-
-module.exports = {
+export default {
   api_base: '/api/v1',
 
   api: {

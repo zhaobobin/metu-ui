@@ -4,3 +4,4 @@ export { default as Card } from './card';
 export { default as Icon } from './icon';
 export { default as Menu } from './menu';
 export { default as Transition } from './transition';
+export { default as Toast } from './toast';

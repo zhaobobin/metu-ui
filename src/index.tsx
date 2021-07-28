@@ -9,3 +9,5 @@ export { default as Icon } from './components/icon';
 export { default as Menu } from './components/menu';
 
 export { default as Transition } from './components/transition';
+
+export { default as Toast } from './components/toast';
