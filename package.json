@@ -67,7 +67,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^3.5.3",
     "husky": "^4.2.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
